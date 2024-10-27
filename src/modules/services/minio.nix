@@ -18,7 +18,7 @@ let
   ];
 
   startScript = ''
-    mkdir -p "$MINIO_DATA_DIR" "$MINIO_CONFIG_DIR"
+    mkdir -p "$MINIO_DATA_DIR" "$MINIO_CONFIG_DIR" "$MINIO_CLIENT_CONFIG_DIR"
     for bucket in ${lib.escapeShellArgs cfg.buckets}; do
       mkdir -p "$MINIO_DATA_DIR/$bucket"
     done
